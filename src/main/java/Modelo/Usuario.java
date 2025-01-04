@@ -15,6 +15,8 @@ public class Usuario {
     private String userName;
     private String contrasenia;
 
+    
+    
     public Usuario(String cedula, String nombre, String apellido, int edad, String direccion, String telefono, String userName, String contrasenia) {
         this.cedula = cedula;
         this.nombre = nombre;
