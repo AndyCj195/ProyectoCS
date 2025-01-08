@@ -11,14 +11,14 @@ package Modelo;
 public class Producto {
     private String nombre;
     private String descripcion;
-    private String rutaiImagen;
+    private String rutaImagen;
     private int cantidad;
     private double precio;
 
-    public Producto(String nombre, String descripcion, String rutaiImagen, int cantidad, double precio) {
+    public Producto(String nombre, String descripcion, String rutaImagen, int cantidad, double precio) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.rutaiImagen = rutaiImagen;
+        this.rutaImagen = rutaImagen;
         this.cantidad = cantidad;
         this.precio = precio;
     }
@@ -32,7 +32,7 @@ public class Producto {
     }
 
     public String getRutaiImagen() {
-        return rutaiImagen;
+        return rutaImagen;
     }
 
     public int getCantidad() {
@@ -51,8 +51,8 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
-    public void setRutaiImagen(String rutaiImagen) {
-        this.rutaiImagen = rutaiImagen;
+    public void setRutaImagen(String rutaiImagen) {
+        this.rutaImagen = rutaiImagen;
     }
 
     public void setCantidad(int cantidad) {

@@ -28,6 +28,12 @@ public class Usuario {
         this.contrasenia = contrasenia;
     }
     
+    public Usuario(String nombre, String apellido){
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+    
+    
     
     public String getCedula() {
         return cedula;
@@ -92,5 +98,18 @@ public class Usuario {
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
+
+    @Override
+    public String toString() {
+        return "cedula=" + cedula + 
+               "\nnombre=" + nombre + 
+               "\napellido=" + apellido + 
+               "\nedad=" + edad + 
+               "\ndireccion=" + direccion + 
+               "\ntelefono=" + telefono + 
+               "\nuserName=" + userName; 
+    }
+    
+    
     
 }

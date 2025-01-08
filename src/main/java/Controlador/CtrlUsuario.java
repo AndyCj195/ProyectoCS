@@ -9,5 +9,5 @@ package Controlador;
  * @author andre
  */
 public class CtrlUsuario {
-    private int idUsuario;
+
 }
