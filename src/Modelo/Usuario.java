@@ -2,121 +2,91 @@ package Modelo;
 
 public class Usuario {
 
-    private String cedula;
-    private String nombre;
-    private String apellido;
-    private int edad;
-    private String direccion;
-    private String telefono;
-    private String userName;
+    private int id_usuario;
+    private String nombres;
+    private String apellidos;
+    private String correo;
+    private String user;
     private String contrasenia;
-    private Boolean esVendedor = false;
+    private String rol;
 
-    
-    
-    public Usuario(String cedula, String nombre, String apellido, int edad, String direccion, String telefono, String userName, String contrasenia, Boolean esVendedor) {
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.direccion = direccion;
-        this.telefono = telefono;
-        this.userName = userName;
+    public Usuario (int id_usuario, String nombres, String apellidos, String correo, String user, String contrasenia, String rol ){
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.correo = correo;
+        this.user = user;
         this.contrasenia = contrasenia;
-        this.esVendedor = esVendedor;
+        this.rol = rol;
     }
     
-    public Usuario(String nombre, String apellido){
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public Usuario (String nombres, String apellidos){
+        this.nombres = nombres;
+        this.apellidos = apellidos;
     }
-    
-    
-    
-    public String getCedula() {
-        return cedula;
+ 
+    public int getId_usuario() {
+        return id_usuario;
     }
 
-    public String getNombre() {
-        return nombre;
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getNombres() {
+        return nombres;
     }
 
-    public int getEdad() {
-        return edad;
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getApellidos() {
+        return apellidos;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getContrasenia() {
         return contrasenia;
     }
 
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
 
-    public Boolean getEsVendedor() {
-        return esVendedor;
+    public String getRol() {
+        return rol;
     }
 
-    public void setEsVendedor(Boolean esVendedor) {
-        this.esVendedor = esVendedor;
+    public void setRol(String rol) {
+        this.rol = rol;
     }
-
     
     @Override
     public String toString() {
-        return "cedula=" + cedula + 
-               "\nnombre=" + nombre + 
-               "\napellido=" + apellido + 
-               "\nedad=" + edad + 
-               "\ndireccion=" + direccion + 
-               "\ntelefono=" + telefono + 
-               "\nuserName=" + userName; 
+        return "nombres=" + nombres + 
+               "\napellidos=" + apellidos + 
+               "\ncorreo=" + correo + 
+               "\nuser=" + user + 
+               "\ncontrasenia=" + contrasenia + 
+               "\nrol=" + rol;
     }
-    
-    
-    
 }
