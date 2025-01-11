@@ -89,18 +89,12 @@ public class FrmLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bttIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttIngresarActionPerformed
-        // TODO add your handling code here:
+
         CtrlUsuario controlu = new CtrlUsuario();
         String usuario = txtUsuario.getText();
         String contrasenia = new String(txtContrasenia.getPassword());
-
         if (controlu.login(usuario, contrasenia)) {
-            JOptionPane.showMessageDialog(this, "Login exitoso");
-            // Aquí puedes abrir la siguiente vista (por ejemplo, un panel de usuario)
-            // new MainView().setVisible(true); // Ejemplo de abrir otra vista
-            main inicio = new main();
-            inicio.setVisible(true);
-            dispose(); // Cierra la ventana de login
+//            JOptionPane.showMessageDialog(this, "Login exitoso");
         } else {
             JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos");
         }
