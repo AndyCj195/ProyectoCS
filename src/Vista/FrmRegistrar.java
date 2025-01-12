@@ -31,7 +31,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtNombres = new javax.swing.JTextField();
@@ -46,71 +46,105 @@ public class FrmRegistrar extends javax.swing.JFrame {
         txtContrasenia2 = new javax.swing.JPasswordField();
         jLabel8 = new javax.swing.JLabel();
         cbRol = new javax.swing.JComboBox<>();
+        bttVolver = new javax.swing.JButton();
         bttRegistrar = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(630, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(589, 771));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        jLabel1.setText("Registro de Usuario");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
+        jLabel12.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("SIGN UP");
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, -1, 50));
 
         jLabel2.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombres");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Apellidos");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
         jPanel2.add(txtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 220, -1));
         jPanel2.add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 220, -1));
 
         jLabel4.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Correo");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
         jPanel2.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 220, 30));
 
         jLabel5.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Usuario");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
         jPanel2.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 220, 30));
 
         jLabel6.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Contraseña");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
         jPanel2.add(txtContrasenia, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 220, -1));
 
         jLabel7.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Repetir Contraseña");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
         jPanel2.add(txtContrasenia2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 220, -1));
 
         jLabel8.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Rol");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
 
         cbRol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Comprador", "Vendedor" }));
         jPanel2.add(cbRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 220, -1));
 
+        bttVolver.setBackground(new java.awt.Color(172, 105, 99));
+        bttVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/comeBackWhite.png"))); // NOI18N
+        bttVolver.setBorder(null);
+        bttVolver.setBorderPainted(false);
+        bttVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bttVolverActionPerformed(evt);
+            }
+        });
+        jPanel2.add(bttVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        bttRegistrar.setBackground(new java.awt.Color(255, 204, 153));
         bttRegistrar.setFont(new java.awt.Font("Cambria", 1, 12)); // NOI18N
         bttRegistrar.setText("Registrar");
+        bttRegistrar.setBorder(null);
         bttRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttRegistrarActionPerformed(evt);
             }
         });
-        jPanel2.add(bttRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 170, -1));
+        jPanel2.add(bttRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 170, 25));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 280, 450));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgJdos/Register.png"))); // NOI18N
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -270, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 500));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 280, 450));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgJdos/Tienda.png"))); // NOI18N
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, 30, -1, -1));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgJdos/login-fondo.png"))); // NOI18N
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -110, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -135,6 +169,12 @@ public class FrmRegistrar extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Error al registrar el usuario. Puede que el usuario ya exista.");
         }
     }//GEN-LAST:event_bttRegistrarActionPerformed
+
+    private void bttVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttVolverActionPerformed
+        // TODO add your handling code here:
+        FrmLogin volver = new FrmLogin();
+        volver.setVisible(true);
+    }//GEN-LAST:event_bttVolverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,8 +216,11 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bttRegistrar;
+    private javax.swing.JButton bttVolver;
     private javax.swing.JComboBox<String> cbRol;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -185,6 +228,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField txtApellidos;

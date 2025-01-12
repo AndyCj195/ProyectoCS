@@ -38,52 +38,65 @@ public class FrmLogin extends javax.swing.JFrame {
         txtContrasenia = new javax.swing.JPasswordField();
         bttIngresar = new javax.swing.JButton();
         bttRegistro = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 153, 51));
-        setMinimumSize(null);
-        setPreferredSize(null);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(589, 771));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel2.setBackground(new java.awt.Color(199, 196, 196));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
         jLabel2.setText("LOGIN");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         jLabel1.setText("Usuario");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
-        jPanel2.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 210, 30));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
+        jPanel2.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 210, 30));
 
         jLabel3.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         jLabel3.setText("Contraseña");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
-        jPanel2.add(txtContrasenia, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 210, 30));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+        jPanel2.add(txtContrasenia, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 210, 30));
 
+        bttIngresar.setBackground(new java.awt.Color(204, 255, 204));
+        bttIngresar.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         bttIngresar.setText("Iniciar sesion");
+        bttIngresar.setBorder(null);
         bttIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttIngresarActionPerformed(evt);
             }
         });
-        jPanel2.add(bttIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 150, -1));
+        jPanel2.add(bttIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 150, 25));
 
+        bttRegistro.setBackground(new java.awt.Color(255, 153, 153));
+        bttRegistro.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         bttRegistro.setText("Registrate");
+        bttRegistro.setBorder(null);
         bttRegistro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttRegistroActionPerformed(evt);
             }
         });
-        jPanel2.add(bttRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 150, -1));
+        jPanel2.add(bttRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 400, 150, 25));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 280, 450));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgJdos/login-centro.png"))); // NOI18N
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-107, -20, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 500));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 280, 450));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgJdos/login-fondo.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -100, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -150,6 +163,8 @@ public class FrmLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField txtContrasenia;
