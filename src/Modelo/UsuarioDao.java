@@ -6,6 +6,7 @@ package Modelo;
 import Vista.*;
 import BDD.conexion;
 import java.sql.*;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -35,6 +36,16 @@ public class UsuarioDao {
         }
     }
 
+    //Funcion para Obtener la Seccion del usuario
+    public void obtenerNombreUsuario(String usuario, javax.swing.JLabel lblUserName){
+        try(Connection con = conexion.conectar()){
+            
+            
+        }catch(SQLException ex){
+            
+        }
+    }
+    
     // Función para redirigir según el rol
     private void AccesoPorRol(String rol) {
         if ("administrador".equals(rol)) {

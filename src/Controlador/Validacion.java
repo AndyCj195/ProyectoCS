@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.sql.*;
 
 import BDD.conexion;
+import java.awt.BorderLayout;
 public class Validacion {
    
     public JLabel limitarTexto(JLabel label, String texto, int limite){
@@ -19,6 +20,7 @@ public class Validacion {
         Random random = new Random();
         return random.nextInt((max - min) + 1) + min; // Generar número aleatorio entre min y max
     }
+    
     public int contarFilasPorId(int idProducto) {
         int count = 0;
         try (Connection con = conexion.conectar()) {
@@ -34,5 +36,15 @@ public class Validacion {
         }
         return count;
     }
-    
+   
+    public void ShowJPanel(JPanel p, JPanel content) {
+        // Configuración para mostrar el panel en el contenedor
+        p.setSize(941, 551); // Dimensiones específicas
+        p.setLocation(0, 0);
+
+        content.removeAll(); // Limpiar contenido previo
+        content.add(p); // Agregar el nuevo panel
+        content.revalidate(); // Actualizar el contenedor
+        content.repaint(); // Repintar el contenedor
+    }
 }
