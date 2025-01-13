@@ -730,8 +730,8 @@ public class main extends JFrame {
 
         // Crear el contenedor de los ProductoPanel
         JPanel dynamicPanel = new JPanel();
-        dynamicPanel.setLayout(new BoxLayout(dynamicPanel, BoxLayout.X_AXIS)); // Diseño horizontal
-
+        dynamicPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10)); // Diseño con espaciado
+        dynamicPanel.setBackground(Color.LIGHT_GRAY);
         // Generar los paneles ProductoPanel y agregarlos al contenedor
         for (int i = 1; i <= 10; i++) {
             ProductoPanel productoPanel = new ProductoPanel();
@@ -749,7 +749,7 @@ public class main extends JFrame {
         contentPanel.add(scrollP);
 
         // Usar ShowJPanel para mostrar el contentPanel en el contenedor principal
-        val.ShowJPanel(contentPanel, Content);
+        val.ShowJPanel(contentPanel, Content, 933, 546);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

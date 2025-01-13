@@ -3,6 +3,7 @@ package Modelo;
 public class Usuario {
 
     private int id_usuario;
+    private String cedula;
     private String nombres;
     private String apellidos;
     private String correo;
@@ -10,13 +11,32 @@ public class Usuario {
     private String contrasenia;
     private String rol;
 
-    public Usuario (int id_usuario, String nombres, String apellidos, String correo, String user, String contrasenia, String rol ){
+    public Usuario (int id_usuario, String cedula, String nombres, String apellidos, String correo, String user, String contrasenia, String rol ){
+        this.cedula = cedula;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.correo = correo;
         this.user = user;
         this.contrasenia = contrasenia;
         this.rol = rol;
+    }
+
+
+    public Usuario(int id_usuario, String cedula, String nombres, String apellidos, String correo, String user, String rol) {
+        this.cedula = cedula;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.correo = correo;
+        this.user = user;
+        this.rol = rol;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+    
+        public String getCedula() {
+        return cedula;
     }
     
     public Usuario (String nombres, String apellidos){

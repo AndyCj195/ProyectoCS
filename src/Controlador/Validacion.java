@@ -37,9 +37,10 @@ public class Validacion {
         return count;
     }
    
-    public void ShowJPanel(JPanel p, JPanel content) {
+    public void ShowJPanel(JPanel p, JPanel content, int X, int Y) {
+
         // Configuración para mostrar el panel en el contenedor
-        p.setSize(941, 551); // Dimensiones específicas
+        p.setSize(X, Y); // Dimensiones específicas
         p.setLocation(0, 0);
 
         content.removeAll(); // Limpiar contenido previo

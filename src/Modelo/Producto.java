@@ -2,13 +2,15 @@ package Modelo;
 
 public class Producto {
     // Atributos de la clase Producto
+    private String codigoUnico;
     private String nombre;        // Nombre del producto
     private String descripcion;   // Descripción del producto
     private String rutaImagen;    // Ruta de la imagen del producto
     private int cantidad;         // Cantidad disponible del producto
     private double precio;        // Precio del producto
 
-    public Producto(String nombre, String descripcion, String rutaImagen, int cantidad, double precio) {
+    public Producto(String codigoUnico,String nombre, String descripcion, String rutaImagen, int cantidad, double precio) {
+        this.codigoUnico = codigoUnico;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.rutaImagen = rutaImagen;
@@ -16,6 +18,18 @@ public class Producto {
         this.precio = precio;
     }
 
+    public String getCodigoUnico() {
+        return codigoUnico;
+    }
+
+    public String getRutaImagen() {
+        return rutaImagen;
+    }
+
+    public void setCodigoUnico(String codigoUnico) {
+        this.codigoUnico = codigoUnico;
+    }
+    
     public String getNombre() {
         return nombre;
     }

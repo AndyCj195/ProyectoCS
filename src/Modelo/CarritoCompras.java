@@ -15,12 +15,12 @@ public class CarritoCompras extends Producto{
     private Date fecha;
     private boolean estado = true;
 
-    public CarritoCompras(double precio, Date fecha, String nombre, String descripcion, String rutaImagen, int cantidad, double precioTotal) {
-        super(nombre, descripcion, rutaImagen, cantidad, precio);
+    public CarritoCompras(double precioTotal, Date fecha, String codigoUnico, String nombre, String descripcion, String rutaImagen, int cantidad, double precio) {
+        super(codigoUnico, nombre, descripcion, rutaImagen, cantidad, precio);
         this.precioTotal = precioTotal;
         this.fecha = fecha;
     }
-
+    
     public void setPrecioTotal(double precioTotal) {
         this.precioTotal = precioTotal;
     }
