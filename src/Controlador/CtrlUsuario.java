@@ -14,10 +14,10 @@ public class CtrlUsuario {
         return true; 
     }
     
-    public boolean register(String nombres, String apellidos, String correo, String usuario, String contrasenia, String rol) {
+    public boolean register(String cedula, String nombres, String apellidos, String correo, String user, String contrasenia, String rol) {
         // Crear un nuevo objeto usuario y registrar
-        Usuario newUser = new Usuario(0, nombres, apellidos, correo, usuario, contrasenia, rol);
+        Usuario newUser = new Usuario(0,cedula, nombres, apellidos, correo, user, contrasenia, rol);
         return userDAO.registrarUser(newUser);
+ 
     }
-  
 }

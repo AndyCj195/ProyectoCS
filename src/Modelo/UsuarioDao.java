@@ -18,7 +18,7 @@ public class UsuarioDao {
      // Función para validar usuarios
     public void validarUser(String usuario, String contrasenia) {
         try (Connection con = conexion.conectar()) {
-            String sql = "SELECT rol FROM usuarios WHERE usuario = ? AND contrasena = ?";
+            String sql = "SELECT rol FROM usuario WHERE usuario = ? AND contrasena = ?";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, usuario);
             stmt.setString(2, contrasenia);
@@ -50,33 +50,37 @@ public class UsuarioDao {
     private void AccesoPorRol(String rol) {
         if ("administrador".equals(rol)) {
             // Redirigir a la vista de admin
-            new FrmAlterno().setVisible(true);  // Mostrar interfaz de administrador
+            new FrmAdministrador().setVisible(true);  // Mostrar interfaz de administrador
         } else if ("comprador".equals(rol)) {
             // Redirigir a la vista de comprador
             new main().setVisible(true);  // Mostrar interfaz principal
         } else if ("vendedor".equals(rol)){
             //redirigir a la vista vendedor
-            new FrmAlterno().setVisible(true);// comparte interfaz con administrador
+            new main().setVisible(true);// comparte interfaz con administrador
         } else{
             JOptionPane.showMessageDialog(null, "Rol no reconocido");
         }
     }
 
     //funcion para registrar los usuarios
-    public boolean registrarUser(Usuario user) {
+     public boolean registrarUser(Usuario user) {
         try (Connection con = conexion.conectar()) {
-            String sql = "INSERT INTO usuarios (nombres, apellidos, usuario, correo, contrasena, rol) VALUES (?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO usuario"
+                    + " (nombres, apellidos,cedula, usuario, correo, contrasena, rol) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, user.getNombres());
             stmt.setString(2, user.getApellidos());
-            stmt.setString(3, user.getUser());
-            stmt.setString(4, user.getCorreo());
-            stmt.setString(5, user.getContrasenia()); 
-            stmt.setString(6, user.getRol()); // crear funcion para la validación por rol
+            stmt.setString(3, user.getCedula());
+            stmt.setString(4, user.getUser());
+            stmt.setString(5, user.getCorreo());
+            stmt.setString(6, user.getContrasenia()); 
+            stmt.setString(7, user.getRol()); // crear funcion para la validación por rol
             return stmt.executeUpdate() > 0; // Devuelve true si se insertó correctamente
         } catch (SQLException e) {
             return false;
         }
-    } 
+    }
+     
+    
     
 }

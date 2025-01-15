@@ -10,7 +10,7 @@ public class Usuario {
     private String user;
     private String contrasenia;
     private String rol;
-
+    
     public Usuario (int id_usuario, String cedula, String nombres, String apellidos, String correo, String user, String contrasenia, String rol ){
         this.cedula = cedula;
         this.nombres = nombres;
@@ -30,18 +30,18 @@ public class Usuario {
         this.user = user;
         this.rol = rol;
     }
-
-    public void setCedula(String cedula) {
+    
+    public Usuario (String nombres, String apellidos){
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+    }
+    
+      public void setCedula(String cedula) {
         this.cedula = cedula;
     }
     
         public String getCedula() {
         return cedula;
-    }
-    
-    public Usuario (String nombres, String apellidos){
-        this.nombres = nombres;
-        this.apellidos = apellidos;
     }
  
     public int getId_usuario() {
@@ -102,7 +102,8 @@ public class Usuario {
     
     @Override
     public String toString() {
-        return "nombres=" + nombres + 
+        return "cedula =" + cedula +
+               "\nnombres=" + nombres + 
                "\napellidos=" + apellidos + 
                "\ncorreo=" + correo + 
                "\nuser=" + user + 
